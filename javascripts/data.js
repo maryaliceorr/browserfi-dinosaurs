@@ -1,10 +1,11 @@
 const monkeyButt = require('./dinosaurs');
+const printToDom = require('./dom');
 
 let dinoArray = [];
 
 const whenDinosLoad = function () {
   dinoArray = JSON.parse(this.responseText).dinosaurs;
-  console.log('dinoArray', dinoArray);
+  printToDom(dinoArray);
 };
 
 const badDinos = function () {
